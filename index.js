@@ -1,28 +1,38 @@
-const swipeImage = () => {
+const swipeImage = (() => {
   const slides = document.querySelectorAll('.single-slide');
-  const nextBtn = document.querySelector('.next-btn');
-  const backBtn = document.querySelector('.back-btn');
 
-  let activeImage = 1;
+  let activeImage = 0;
 
   function next() {
-    if (activeImage == 4) {
-      activeImage == 1;
+    if (activeImage == slides.length) {
+      activeImage == 0;
     } else activeImage++;
+    updateImage(activeImage);
   }
 
   function back() {
-    if (activeImage == 1) {
-      activeImage == 4;
+    if (activeImage == 0) {
+      activeImage == slides.length;
     } else activeImage--;
+    updateImage(activeImage);
   }
 
-  function updateImage(index) {}
+  function updateImage(index) {
+    hideAll();
+    slides[index].classList.toggle('visible');
+  }
+
+  function hideAll() {
+    slides.forEach((slide) => slide.classList.remove('visible'));
+  }
 
   return {
     next,
     back,
   };
-};
+})();
+
+const nextBtn = document.querySelector('.next-btn');
+const backBtn = document.querySelector('.back-btn');
 
 nextBtn.addEventListener('click', swipeImage.next);

@@ -18,6 +18,7 @@
 
 .single-slide {
   width: 100%;
+  display: none;
 }
 
 .single-slide.visible {
