@@ -3,7 +3,7 @@ const backBtn = document.querySelector('.back-btn');
 const slideDots = document.querySelectorAll('.dot');
 
 const swipeImage = (() => {
-  const slides = document.querySelectorAll('.single-slide');
+  const slides = document.querySelectorAll('.single-image');
 
   let activeImage = 0;
 
