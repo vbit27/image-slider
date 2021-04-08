@@ -4,6 +4,9 @@
   box-sizing: border-box;
 }
 
+body {
+  background-image: url(./images/background.jpg);
+}
 .slideshow-container {
   width: 850px;
   height: 580px;
@@ -11,9 +14,9 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: antiquewhite;
-  border-radius: 24px;
-  border: 20px solid rgb(134, 134, 134);
+  border-radius: 30px;
+  border: 30px solid #dde6d4;
+  box-shadow: 2px 6px 10px 5px rgba(8, 58, 14, 0.1);
 }
 
 .single-image {
@@ -72,18 +75,18 @@ img {
   height: 15px;
   margin: 10px;
   border-radius: 50%;
-  background-color: rgb(177, 177, 177);
+  background-color: #dde6d4;
   box-shadow: 0px 3px 5px 1px rgba(0, 0, 0, 0.1);
   cursor: pointer;
   transition: 0.3s ease;
 }
 
 .dot:hover {
-  background-color: rgb(54, 54, 54);
+  background-color: #a0dd60;
 }
 
 .dot.active {
-  background-color: black;
+  background-color: #a0dd60;
 }
 
 @media only screen and (max-width: 900px) {

@@ -61,7 +61,7 @@ const swipeImage = (() => {
   };
 })();
 
-//setInterval(swipeImage.next, 5000);
+setInterval(swipeImage.next, 5000);
 
 nextBtn.addEventListener('click', swipeImage.next);
 backBtn.addEventListener('click', swipeImage.back);
