@@ -34,22 +34,27 @@ img {
 }
 
 .button {
-  padding: 2rem;
-  width: fit-content;
-  border-radius: 50%;
-  background-color: black;
+  width: 7%;
+  height: fit-content;
   position: absolute;
   z-index: 1;
-  top: 45%;
+  top: 33%;
   cursor: pointer;
+  opacity: 0.1;
+}
+
+.button:hover {
+  opacity: 0.5;
 }
 
 .back-btn {
   left: 0;
+  left: 1%;
 }
 
 .next-btn {
   right: 0;
+  right: 1%;
 }
 
 .dot-container {
@@ -73,6 +78,17 @@ img {
   transition: 0.3s ease;
 }
 
+.dot:hover {
+  background-color: rgb(54, 54, 54);
+}
+
 .dot.active {
   background-color: black;
+}
+
+@media only screen and (max-width: 900px) {
+  .slideshow-container {
+    width: 560px;
+    height: 380px;
+  }
 }
