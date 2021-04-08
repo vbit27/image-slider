@@ -61,6 +61,8 @@ const swipeImage = (() => {
   };
 })();
 
+setInterval(swipeImage.next, 5000);
+
 nextBtn.addEventListener('click', swipeImage.next);
 backBtn.addEventListener('click', swipeImage.back);
 slideDots.forEach((dot) => dot.addEventListener('click', swipeImage.selectDot));
